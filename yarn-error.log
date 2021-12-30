@@ -1,0 +1,75 @@
+Arguments: 
+  C:\Program Files\nodejs\node.exe C:\Program Files (x86)\Yarn\bin\yarn.js add phc-argon2
+
+PATH: 
+  C:\Program Files (x86)\Rockwell Software\RSCommon;C:\Program Files\Common Files\Siemens\Automation\Simatic OAM\bin;C:\Python39\Scripts\;C:\Python39\;C:\Python27\;C:\Python27\Scripts;C:\Python38\Scripts\;C:\Python38\;C:\Program Files\Microsoft MPI\Bin\;C:\Program Files (x86)\Common Files\Oracle\Java\javapath;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\WINDOWS\System32\OpenSSH\;C:\Program Files (x86)\Microsoft SQL Server\150\Tools\Binn\;C:\Program Files\Microsoft SQL Server\150\Tools\Binn\;C:\Program Files (x86)\Microsoft SQL Server\150\DTS\Binn\;C:\Program Files\Microsoft SQL Server\150\DTS\Binn\;C:\Program Files\Common Files\Autodesk Shared\;C:\ProgramData\chocolatey\bin;C:\Program Files (x86)\PKWARE\pkzipc;C:\Users\Pichau\AppData\Local\Programs\Python\Python37;C:\Users\Pichau\AppData\Local\Programs\Python\Python37\Scripts;C:\Program Files\dotnet\;C:\Program Files (x86)\GtkSharp\2.12\bin;C:\Program Files\Git\cmd;C:\Program Files\Java\jdk1.8.0_211\bin;C:\Users\Pichau\AppData\Local\Android\Sdk\emulator;C:\Users\Pichau\AppData\Local\Android\Sdk\tools\bin;C:\Users\Pichau\AppData\Local\Android\Sdk\platform-tools;C:\Users\Pichau\AppData\Local\Android\Sdk\tools;C:\Users\Pichau\AppData\Local\Android\Sdk;C:\Users\Pichau\AppData\Local\Android\Sdk\platform-tools;C:\Program Files (x86)\Yarn\bin\;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\WINDOWS\System32\OpenSSH\;C:\PROGRA~2\FANUC\Shared\UTILIT~1;C:\PROGRA~2\FANUC\WinOLPC\bin;C:\xampp\php;C:\composer;C:\Program Files\nodejs\;C:\Program Files\Microsoft SQL Server\Client SDK\ODBC\130\Tools\Binn\;C:\Program Files (x86)\Microsoft SQL Server\130\Tools\Binn\;C:\Program Files\Microsoft SQL Server\130\Tools\Binn\;C:\Program Files\Microsoft SQL Server\130\DTS\Binn\;C:\Program Files (x86)\Common Files\Siemens\;C:\Program Files (x86)\Common Files\Siemens\Interfaces;C:\Program Files (x86)\Common Files\Siemens\ACE\Interfaces;C:\Program Files (x86)\Common Files\Rockwell\;C:\Program Files\Docker\Docker\resources\bin;C:\ProgramData\DockerDesktop\version-bin;C:\Program Files\Java\jdk1.8.0_251\bin;C:\Program Files\nodejs;C:\Users\Pichau\AppData\Local\Programs\Microsoft VS Code\bin;C:\Users\Pichau\AppData\Local\Programs\Python\Python37;C:\Users\Pichau\AppData\Local\Programs\Python\Python37\Scripts;C:\Users\Pichau\.dotnet\tools;C:\Users\Pichau\.dotnet\tools;C:\Program Files\dotnet;C:\Users\Pichau\AppData\Local\Yarn\bin;C:\Users\Pichau\AppData\Local\Microsoft\WindowsApps;C:\development\flutter\bin;C:\xampp\php;C:\Users\Pichau\AppData\Roaming\Composer\vendor\bin;C:\Users\Pichau\AppData\Roaming\npm;C:\Program Files\MongoDB\Server\4.4\bin;C:\Program Files\heroku\bin
+
+Yarn version: 
+  1.22.5
+
+Node version: 
+  14.15.4
+
+Platform: 
+  win32 x64
+
+Trace: 
+  Error: https://registry.yarnpkg.com/faker/-/faker-5.5.3.tgz: ESOCKETTIMEDOUT
+      at ClientRequest.<anonymous> (C:\Program Files (x86)\Yarn\lib\cli.js:141376:19)
+      at Object.onceWrapper (events.js:421:28)
+      at ClientRequest.emit (events.js:315:20)
+      at TLSSocket.emitRequestTimeout (_http_client.js:784:9)
+      at Object.onceWrapper (events.js:421:28)
+      at TLSSocket.emit (events.js:327:22)
+      at TLSSocket.Socket._onTimeout (net.js:483:8)
+      at listOnTimeout (internal/timers.js:554:17)
+      at processTimers (internal/timers.js:497:7)
+
+npm manifest: 
+  {
+    "name": "roleplay-api",
+    "version": "1.0.0",
+    "private": true,
+    "scripts": {
+      "dev": "node ace serve --watch",
+      "build": "node ace build --production",
+      "start": "node server.js",
+      "lint": "eslint . --ext=.ts",
+      "format": "prettier --write .",
+      "test": "node -r @adonisjs/assembler/build/register japaFile.ts"
+    },
+    "devDependencies": {
+      "@adonisjs/assembler": "^5.3.9",
+      "@types/supertest": "^2.0.11",
+      "adonis-preset-ts": "^2.1.0",
+      "eslint": "^8.4.1",
+      "eslint-config-prettier": "^8.3.0",
+      "eslint-plugin-adonis": "^2.1.0",
+      "eslint-plugin-prettier": "^4.0.0",
+      "execa": "^5.1.1",
+      "get-port": "^5.1.1",
+      "japa": "^4.0.0",
+      "pino-pretty": "^7.3.0",
+      "prettier": "^2.5.1",
+      "sqlite3": "^5.0.2",
+      "supertest": "^6.1.6",
+      "typescript": "^4.5.4",
+      "youch": "^2.2.2",
+      "youch-terminal": "^1.1.1"
+    },
+    "dependencies": {
+      "@adonisjs/core": "^5.4.2",
+      "@adonisjs/lucid": "^16.3.2",
+      "@adonisjs/repl": "^3.1.7",
+      "luxon": "^2.2.0",
+      "proxy-addr": "^2.0.7",
+      "reflect-metadata": "^0.1.13",
+      "source-map-support": "^0.5.21"
+    }
+  }
+
+yarn manifest: 
+  No manifest
+
+Lockfile: 
+  No lockfile
