@@ -35,7 +35,6 @@ $ cd api-roleplay
 # Instale as dependências
 $ npm install ou yarn install
 
-
 # Execute a aplicação em modo de desenvolvimento
 $ npm run dev ou yarn dev
 
