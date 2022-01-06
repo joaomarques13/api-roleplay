@@ -58,7 +58,7 @@ export default class GroupRequestsController {
     response.created({ groupRequest })
   }
 
-  public async accept({ request, response }: HttpContextContract) {
+  public async accept({ request, response, bouncer }: HttpContextContract) {
     const groupId = request.param('groupId') as number
     const requestId = request.param('requestId') as number
 
@@ -66,6 +66,9 @@ export default class GroupRequestsController {
       .where('id', requestId)
       .andWhere('groupId', groupId)
       .firstOrFail()
+
+    await groupRequest.load('group')
+    await bouncer.authorize('acceptGroupRequest', groupRequest)
 
     const updatedGroupRequest = await groupRequest.merge({ status: 'ACCEPTED' }).save()
 
@@ -75,7 +78,7 @@ export default class GroupRequestsController {
     response.ok({ groupRequest: updatedGroupRequest })
   }
 
-  public async destroy({ request, response }: HttpContextContract) {
+  public async destroy({ request, response, bouncer }: HttpContextContract) {
     const groupId = request.param('groupId') as number
     const requestId = request.param('requestId') as number
 
@@ -83,6 +86,9 @@ export default class GroupRequestsController {
       .where('id', requestId)
       .andWhere('groupId', groupId)
       .firstOrFail()
+
+    await groupRequest.load('group')
+    await bouncer.authorize('rejectGroupRequest', groupRequest)
 
     await groupRequest.delete()
 
