@@ -1,6 +1,6 @@
 # API Roleplay
 
-<p align="left">API desenvolvida em AdonisJS</p>
+<p align="left">API desenvolvida em JavaScript com AdonisJS</p>
 
 ## 👨‍💻 Tecnologias
 
