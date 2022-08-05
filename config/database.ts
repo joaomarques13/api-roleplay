@@ -1,4 +1,3 @@
-import Application from '@ioc:Adonis/Core/Application'
 /**
  * Config source: https://git.io/JesV9
  *
@@ -25,46 +24,29 @@ const databaseConfig: DatabaseConfig = {
   connections: {
     /*
     |--------------------------------------------------------------------------
-    | MySQL config
+    | PostgreSQL config
     |--------------------------------------------------------------------------
     |
-    | Configuration for MySQL database. Make sure to install the driver
+    | Configuration for PostgreSQL database. Make sure to install the driver
     | from npm when using this connection
     |
-    | npm i mysql
+    | npm i pg
     |
     */
-    mysql: {
-      client: 'mysql',
+    pg: {
+      client: 'pg',
       connection: {
-        host: Env.get('MYSQL_HOST'),
-        port: Env.get('MYSQL_PORT'),
-        user: Env.get('MYSQL_USER'),
-        password: Env.get('MYSQL_PASSWORD', ''),
-        database: Env.get('MYSQL_DB_NAME'),
+        host: Env.get('DB_HOST'),
+        port: Env.get('DB_PORT'),
+        user: Env.get('DB_USER'),
+        password: Env.get('DB_PASSWORD', ''),
+        database: Env.get('DB_DATABASE'),
       },
       migrations: {
         naturalSort: true,
       },
       healthCheck: false,
       debug: false,
-    },
-    sqlite: {
-      client: 'sqlite',
-      connection: {
-        filename: Application.tmpPath('db.sqlite3'),
-      },
-      migrations: {
-        naturalSort: true,
-      },
-      useNullAsDefault: true,
-      healthCheck: false,
-      debug: false,
-      pool: {
-        afterCreate: function (conn, cb) {
-          conn.run('PRAGMA foreign_keys=true', cb)
-        },
-      },
     },
   },
 }
