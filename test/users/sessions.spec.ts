@@ -63,7 +63,7 @@ test.group('Session', (group) => {
 
   test('it should return 200 when user signs out', async () => {
     const plainPassword = 'test'
-    const { id, email } = await UserFactory.merge({ password: plainPassword }).create()
+    const { email } = await UserFactory.merge({ password: plainPassword }).create()
 
     const { body } = await supertest(BASE_URL)
       .post('/sessions')

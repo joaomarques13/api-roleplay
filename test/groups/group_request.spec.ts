@@ -199,7 +199,7 @@ test.group('Group Request', (group) => {
       .set('Authorization', `Bearer ${token}`)
       .send({})
 
-    const response = await supertest(BASE_URL)
+    await supertest(BASE_URL)
       .delete(`/groups/${group.id}/requests/${body.groupRequest.id}`)
       .set('Authorization', `Bearer ${token}`)
       .expect(200)
